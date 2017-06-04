@@ -1,8 +1,7 @@
 package com.swad.controller;
 
-import com.swad.model.StudentProperties;
+import com.swad.properties.StudentProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**

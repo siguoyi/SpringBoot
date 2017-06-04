@@ -3,6 +3,7 @@ package com.swad.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 /**
  * Created by chenlei on 2017/5/22.
@@ -15,6 +16,7 @@ public class Student {
     @GeneratedValue
     private Integer id;
 
+    @Min(value = 24, message = "The students'age is not allowed to login.")
     private Integer age;
 
     private String name;
@@ -53,5 +55,15 @@ public class Student {
 
     public void setScore(String score) {
         this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", score='" + score + '\'' +
+                '}';
     }
 }
